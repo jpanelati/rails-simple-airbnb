@@ -1,0 +1,15 @@
+<h1 class="mb-5">All our flats(<%= @flats.size %>)</h1>
+<div class="container d-flex flex-nowrap">
+<% @flats.each do |flat| %>
+<div class="flat-card">
+  <h2><%= flat.name %></h2>
+  <h4><%= flat.address %></h4>
+  <div class="d-flex">
+    <i class="small material-icons">person</i>
+    <h4><%= flat.number_of_guests %></h4>
+    <i class="small material-icons">attach_money</i>
+    <h4><%= flat.price_per_night %></h4>
+  </div>
+</div>
+<% end %>
+</div>
